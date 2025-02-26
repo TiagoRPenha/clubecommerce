@@ -3,7 +3,7 @@ using Ecommerce.Business.Models;
 
 namespace Ecommerce.Business.Interfaces.Repositories
 {
-    public interface BaseRepository<TEntity> where TEntity : BaseEntity
+    public interface IBaseRepository<TEntity> where TEntity : BaseEntity
     {
         Task<IList<TEntity>> GetAll();
         Task<TEntity> GetById(Guid id);
