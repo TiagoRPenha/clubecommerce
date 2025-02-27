@@ -10,6 +10,11 @@ namespace Ecommerce.Infrastructure.Mappings
         {
             builder.HasKey(p => p.Sku);
 
+            builder.Property(p => p.Sku)
+                .HasColumnType("varchar(50)")
+                .HasMaxLength(50)
+                .IsRequired();
+
             builder.Property(p => p.Name)
                 .HasColumnType("varchar(15)")
                 .HasMaxLength(15)
