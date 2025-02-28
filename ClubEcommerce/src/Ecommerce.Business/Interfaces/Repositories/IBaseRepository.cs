@@ -5,11 +5,11 @@ namespace Ecommerce.Business.Interfaces.Repositories
 {
     public interface IBaseRepository<TEntity> where TEntity : BaseEntity
     {
-        Task<IList<TEntity>> GetAll();
-        Task<TEntity> GetById(Guid id);
-        Task<IList<TEntity>> GetBySearch(Expression<Func<TEntity, bool>> predicate);
-        Task Insert(TEntity entity);
-        Task Update(TEntity entity);    
-        Task Delete(Guid id);
+        Task<IList<TEntity>> GetAllAsync();
+        Task<TEntity?> GetByIdAsync(Guid id);
+        Task<IList<TEntity>> GetBySearchAsync(Expression<Func<TEntity, bool>> predicate);
+        Task InsertAsync(TEntity entity);
+        Task UpdateAsync(TEntity entity);    
+        Task DeleteAsync(Guid id);
     }
 }
