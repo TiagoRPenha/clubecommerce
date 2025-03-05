@@ -22,7 +22,7 @@ builder.Services.ResolveDependencyInjection();
 builder.Services.AddControllers();
 
 // Add service Identity to the container
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+builder.Services.AddIdentityApiEndpoints<IdentityUser>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
