@@ -15,6 +15,8 @@ namespace Ecommerce.Api.Configurations
 
             // Services
             services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IProductImageService, ProductImageService>();
             
             return services;
         }

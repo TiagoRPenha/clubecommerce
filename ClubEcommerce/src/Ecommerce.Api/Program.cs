@@ -1,4 +1,5 @@
 using Ecommerce.Api.Configurations;
+using Ecommerce.Api.Configurations.Mappings;
 using Ecommerce.Api.IdentityContext;
 using Ecommerce.Infrastructure.ApplicationContext;
 using Microsoft.AspNetCore.Identity;
@@ -16,6 +17,8 @@ builder.Services.AddDbContext<EcommerceClubContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("Ecommerce"));
 });
+
+builder.Services.AddAutoMapper(typeof(ConfigurationMapping));
 
 builder.Services.ResolveDependencyInjection();
 

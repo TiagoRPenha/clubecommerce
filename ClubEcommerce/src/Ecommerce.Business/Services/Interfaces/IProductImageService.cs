@@ -2,7 +2,7 @@
 
 namespace Ecommerce.Business.Services.Interfaces
 {
-    public interface IProductImage : IBaseService<ProductImage>
+    public interface IProductImageService : IBaseService<ProductImage>
     {
     }
 }

@@ -16,8 +16,8 @@ namespace Ecommerce.Infrastructure.Mappings
                 .IsRequired();
 
             builder.Property(p => p.Name)
-                .HasColumnType("varchar(15)")
-                .HasMaxLength(15)
+                .HasColumnType("varchar(70)")
+                .HasMaxLength(70)
                 .IsRequired();
 
             builder.Property(p => p.Description)
